@@ -3,6 +3,12 @@
   "name": "LinkedIn Jobs-Only",
   "description": "Redirect LinkedIn Home to Jobs and hide the Home page/button.",
   "version": "1.1.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "permissions": [
     "tabs",
     "webNavigation",
