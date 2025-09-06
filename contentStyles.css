@@ -1,0 +1,74 @@
+/* Hide early, before JS runs - Comprehensive coverage */
+/* Links to home/feed */
+a[aria-label="Home"],
+a[aria-label*="Home"],
+a[data-test-global-nav-link="feed"],
+a[aria-current="page"][data-test-global-nav-link="feed"],
+a[href="/"],
+a[href="/feed/"],
+a[href^="/feed"],
+a[href="/homepage/"],
+a[href^="/homepage"],
+a[href="/home"],
+a[data-link-to="home"],
+a[data-link-to="feed"],
+a[data-control-name="nav.home"],
+a[data-control-name*="home"],
+a[data-control-name*="feed"],
+a[data-test-nav="home"],
+a[data-test-nav="feed"],
+a.app-aware-link[href="/"],
+a.app-aware-link[href^="/feed"],
+a.global-nav__primary-link[href="/"],
+a.global-nav__primary-link[href^="/feed"],
+a.global-nav__primary-link[href^="https://www.linkedin.com/feed"],
+nav a[href="/"],
+nav a[href^="/feed"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+/* Buttons for home/feed */
+button[data-view-name="navigation-homepage"],
+button[aria-label^="Home"],
+button[aria-label*="Home"],
+button[data-control-name*="home"],
+button[data-test-global-nav-button="home"],
+button[data-test-global-nav-button="feed"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+/* Feed containers and content */
+.feed-outlet,
+[data-test-feed-container],
+main[data-page="feed"],
+main[data-page="home"],
+[data-feed-position],
+.feed-container,
+.scaffold-finite-scroll,
+.core-rail,
+.occludable-update,
+.feed-shared-update-v2,
+[data-urn*="urn:li:activity"],
+.ember-view[data-page="feed"],
+.application-outlet {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+/* Additional aggressive hiding for potential home elements */
+[aria-label*="home" i],
+[data-control-name*="home" i],
+[class*="home" i]:not(.homepage-community-cta):not(.homepage-job-alert) {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}

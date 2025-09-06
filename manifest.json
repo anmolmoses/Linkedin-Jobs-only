@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Jobs-Only",
+  "description": "Redirect LinkedIn Home to Jobs and hide the Home page/button.",
+  "version": "1.1.0",
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "scripting",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "background": { "service_worker": "background.js" },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "rules_1", "enabled": true, "path": "rules_1.json" }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["contentScript.js"],
+      "css": ["contentStyles.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
