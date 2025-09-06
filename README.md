@@ -40,7 +40,7 @@ linkedin_remove_home/
 1. **Clone or download** this repository to your local machine:
 
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/anmolmoses/Linkedin-Jobs-only.git
    # OR download as ZIP and extract
    ```
 
